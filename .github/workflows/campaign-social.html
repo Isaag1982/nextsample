@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaign Social Media Content - Dreem</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Campaign Social Media Showcase Styles */
+        .campaign-social-hero {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e57c2 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            min-height: 60vh;
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .campaign-social-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 15px;
+            text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .campaign-social-hero p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: #ffd700;
+            font-weight: 700;
+        }
+
+        .campaign-social-hero .subtitle {
+            font-size: 1.1rem;
+            color: #e0e0e0;
+            margin-bottom: 40px;
+        }
+
+        /* Content Grid */
+        .campaign-content-section {
+            background: white;
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 60px;
+            background: linear-gradient(135deg, #1e3c72, #7e57c2, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .content-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .campaign-post-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border-top: 5px solid #1e3c72;
+        }
+
+        .campaign-post-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.15);
+        }
+
+        .post-header {
+            background: linear-gradient(135deg, #1e3c72 0%, #7e57c2 100%);
+            padding: 20px;
+            color: white;
+        }
+
+        .post-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .post-platform {
+            display: inline-block;
+            background: rgba(255, 215, 0, 0.3);
+            color: #ffd700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-top: 8px;
+            font-weight: 600;
+        }
+
+        .post-content {
+            padding: 30px;
+        }
+
+        .post-text {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .post-hashtags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 20px 0;
+        }
+
+        .hashtag {
+            display: inline-block;
+            background: #f0f0f0;
+            color: #1e3c72;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .post-preview {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 200px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .post-preview i {
+            font-size: 80px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .post-meta {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 15px;
+            border-top: 1px solid #e0e0e0;
+            font-size: 0.9rem;
+            color: #999;
+        }
+
+        .engagement-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .engagement-icons span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .copy-btn {
+            background: linear-gradient(135deg, #1e3c72, #7e57c2);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+
+        .copy-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(30, 60, 114, 0.4);
+        }
+
+        /* Best Practices Section */
+        .practices-section {
+            background: linear-gradient(135deg, #f5f5f5 0%, #fafafa 100%);
+            padding: 60px 20px;
+        }
+
+        .practices-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .practice-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            border-left: 4px solid #ffd700;
+        }
+
+        .practice-card h4 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .practice-card p {
+            color: #666;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* CTA Section */
+        .campaign-cta-section {
+            background: linear-gradient(135deg, #1e3c72 0%, #7e57c2 100%);
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-text {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #e0e0e0;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #ffd700;
+            color: #1e3c72;
+            padding: 16px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 16px 40px;
+            border: 2px solid white;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .campaign-social-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .cta-heading {
+                font-size: 2rem;
+            }
+        }
+
+        /* Social Media Icon Styles */
+        .facebook-gradient {
+            background: linear-gradient(135deg, #4267B2 0%, #385185 100%);
+        }
+
+        .instagram-gradient {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+
+        .twitter-gradient {
+            background: linear-gradient(135deg, #1DA1F2 0%, #1a91da 100%);
+        }
+
+        .youtube-gradient {
+            background: linear-gradient(135deg, #FF0000 0%, #cc0000 100%);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                <div class="logo">
+                    <img src="websitelogo.png" alt="Dreem Paint Logo" class="logo-img">
+                    <h1>Paint Your Dream</h1>
+                </div>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact Me</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="campaign-social-hero">
+        <h1>🗳️ Campaign Social Media Content</h1>
+        <p>Facebook & Social Media Posts for Local Council Candidate</p>
+        <p class="subtitle">Ready-to-use content templates to boost your campaign reach and engagement</p>
+    </section>
+
+    <!-- Table of Contents -->
+    <section id="contents" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 60px 20px;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 40px; color: #1e3c72; font-family: 'Playfair Display', serif;">Content Sections</h2>
+            <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; list-style: none; padding: 0;">
+                <li style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-left: 5px solid #1e3c72;">
+                    <a href="#facebook" style="color: #1e3c72; text-decoration: none; font-weight: 600; font-size: 1.1rem;">📘 Facebook Campaign Posts</a>
+                </li>
+                <li style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-left: 5px solid #7e57c2;">
+                    <a href="#facebook-practices" style="color: #7e57c2; text-decoration: none; font-weight: 600; font-size: 1.1rem;">📋 Facebook Campaign Best Practices</a>
+                </li>
+                <li style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-left: 5px solid #e91e63;">
+                    <a href="#instagram" style="color: #e91e63; text-decoration: none; font-weight: 600; font-size: 1.1rem;">📸 Instagram Campaign Posts</a>
+                </li>
+                <li style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-left: 5px solid #ff6b6b;">
+                    <a href="#tiktok" style="color: #ff6b6b; text-decoration: none; font-weight: 600; font-size: 1.1rem;">🎵 TikTok Campaign Videos</a>
+                </li>
+                <li style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-left: 5px solid #ff0000;">
+                    <a href="#youtube" style="color: #ff0000; text-decoration: none; font-weight: 600; font-size: 1.1rem;">▶️ YouTube Campaign Content</a>
+                </li>
+                <li style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-left: 5px solid #00bcd4;">
+                    <a href="#strategy" style="color: #00bcd4; text-decoration: none; font-weight: 600; font-size: 1.1rem;">🎯 Social Media Platform Strategy</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Facebook Campaign Posts Section -->
+    <section id="facebook" class="campaign-content-section">
+        <h2 class="section-title">Facebook Campaign Posts</h2>
+        
+        <div class="content-grid">
+            <!-- Post 1: Introduction -->
+            <div class="campaign-post-card">
+                <div class="post-header">
+                    <h3 class="post-title">Meet Your Candidate</h3>
+                    <span class="post-platform">📘 Facebook Post</span>
+                </div>
+                <div class="post-content">
+                    <div class="post-preview facebook-gradient">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <p class="post-text">
+                        "Hi, I'm [Candidate Name], and I'm running for Local Council because I believe in serving our community with integrity and dedication. Together, we can build a better future for all. Let's make a difference! 🇬🇧"
+                    </p>
+                    <div class="post-hashtags">
+                        <span class="hashtag">#LocalCounsel</span>
+                        <span class="hashtag">#Community</span>
+                        <span class="hashtag">#Together</span>
+                    </div>
+                    <div class="post-meta">
+                        <div class="engagement-icons">
+                            <span><i class="fas fa-heart"></i> 128</span>
+                            <span><i class="fas fa-comment"></i> 45</span>
+                            <span><i class="fas fa-share"></i> 89</span>
+                        </div>
+                        <button class="copy-btn">Copy Text</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 2: Community Values -->
+            <div class="campaign-post-card">
+                <div class="post-header">
+                    <h3 class="post-title">Our Values</h3>
+                    <span class="post-platform">📘 Facebook Post</span>
+                </div>
+                <div class="post-content">
+                    <div class="post-preview facebook-gradient">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <p class="post-text">
+                        "Our campaign is built on three core values: 💪 Accountability - We answer to you 🤝 Community - We listen to your needs 🌟 Progress - We deliver real results. Vote [Candidate Name] for a council that truly cares!"
+                    </p>
+                    <div class="post-hashtags">
+                        <span class="hashtag">#Values</span>
+                        <span class="hashtag">#Accountability</span>
+                        <span class="hashtag">#Community</span>
+                    </div>
+                    <div class="post-meta">
+                        <div class="engagement-icons">
+                            <span><i class="fas fa-heart"></i> 156</span>
+                            <span><i class="fas fa-comment"></i> 67</span>
+                            <span><i class="fas fa-share"></i> 112</span>
+                        </div>
+                        <button class="copy-btn">Copy Text</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 3: Education Focus -->
+            <div class="campaign-post-card">
+                <div class="post-header">
+                    <h3 class="post-title">Investing in Education</h3>
+                    <span class="post-platform">📘 Facebook Post</span>
+                </div>
+                <div class="post-content">
+                    <div class="post-preview facebook-gradient">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <p class="post-text">
+                        "Our young people deserve the best education. If elected, I commit to: ✅ Increase school funding ✅ Improve teacher support ✅ Create mentorship programs. Education is the key to our future. Let's invest in it together!"
+                    </p>
+                    <div class="post-hashtags">
+                        <span class="hashtag">#Education</span>
+                        <span class="hashtag">#YouthFirst</span>
+                        <span class="hashtag">#Future</span>
+                    </div>
+                    <div class="post-meta">
+                        <div class="engagement-icons">
+                            <span><i class="fas fa-heart"></i> 189</span>
+                            <span><i class="fas fa-comment"></i> 78</span>
+                            <span><i class="fas fa-share"></i> 145</span>
+                        </div>
+                        <button class="copy-btn">Copy Text</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 4: Healthcare -->
+            <div class="campaign-post-card">
+                <div class="post-header">
+                    <h3 class="post-title">Healthcare for All</h3>
+                    <span class="post-platform">📘 Facebook Post</span>
+                </div>
+                <div class="post-content">
+                    <div class="post-preview facebook-gradient">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <p class="post-text">
+                        "Everyone deserves access to quality healthcare. My commitment: 🏥 Extended clinic hours 💊 Affordable services 🧠 Mental health support. Health is wealth, and our community deserves the best care possible!"
+                    </p>
+                    <div class="post-hashtags">
+                        <span class="hashtag">#Healthcare</span>
+                        <span class="hashtag">#HealthIsWealth</span>
+                        <span class="hashtag">#Community</span>
+                    </div>
+                    <div class="post-meta">
+                        <div class="engagement-icons">
+                            <span><i class="fas fa-heart"></i> 201</span>
+                            <span><i class="fas fa-comment"></i> 92</span>
+                            <span><i class="fas fa-share"></i> 158</span>
+                        </div>
+                        <button class="copy-btn">Copy Text</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 5: Environment -->
+            <div class="campaign-post-card">
+                <div class="post-header">
+                    <h3 class="post-title">Green Future</h3>
+                    <span class="post-platform">📘 Facebook Post</span>
+                </div>
+                <div class="post-content">
+                    <div class="post-preview facebook-gradient">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <p class="post-text">
+                        "We have one planet. Let's protect it! 🌍 My environmental plans: ♻️ Waste reduction programs 🌱 Green spaces expansion ⚡ Renewable energy support. Vote for a greener, cleaner future!"
+                    </p>
+                    <div class="post-hashtags">
+                        <span class="hashtag">#Environment</span>
+                        <span class="hashtag">#GreenFuture</span>
+                        <span class="hashtag">#Sustainability</span>
+                    </div>
+                    <div class="post-meta">
+                        <div class="engagement-icons">
+                            <span><i class="fas fa-heart"></i> 234</span>
+                            <span><i class="fas fa-comment"></i> 105</span>
+                            <span><i class="fas fa-share"></i> 178</span>
+                        </div>
+                        <button class="copy-btn">Copy Text</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 6: Economy & Jobs -->
+            <div class="campaign-post-card">
+                <div class="post-header">
+                    <h3 class="post-title">Jobs & Economic Growth</h3>
+                    <span class="post-platform">📘 Facebook Post</span>
+                </div>
+                <div class="post-content">
+                    <div class="post-preview facebook-gradient">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <p class="post-text">
+                        "Economic growth means opportunity for all! 💼 My business plan: 📈 Support small businesses 🏢 Attract new employers 🎓 Skills training programs. Let's create jobs and build prosperity together!"
+                    </p>
+                    <div class="post-hashtags">
+                        <span class="hashtag">#Jobs</span>
+                        <span class="hashtag">#Economy</span>
+                        <span class="hashtag">#Business</span>
+                    </div>
+                    <div class="post-meta">
+                        <div class="engagement-icons">
+                            <span><i class="fas fa-heart"></i> 167</span>
+                            <span><i class="fas fa-comment"></i> 58</span>
+                            <span><i class="fas fa-share"></i> 134</span>
+                        </div>
+                        <button class="copy-btn">Copy Text</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 7: Call to Vote -->
+            <div class="campaign-post-card">
+                <div class="post-header">
+                    <h3 class="post-title">Make Your Voice Heard</h3>
+                    <span class="post-platform">📘 Facebook Post</span>
+                </div>
+                <div class="post-content">
+                    <div class="post-preview facebook-gradient">
+                        <i class="fas fa-vote-yea"></i>
+                    </div>
+                    <p class="post-text">
+                        "Your vote matters! 🗳️ On election day, choose a council member who will listen to you, fight for your rights, and deliver real change. Vote [Candidate Name] for a stronger, more accountable council. See you at the polls!"
+                    </p>
+                    <div class="post-hashtags">
+                        <span class="hashtag">#Vote</span>
+                        <span class="hashtag">#Election</span>
+                        <span class="hashtag">#YourVoice</span>
+                    </div>
+                    <div class="post-meta">
+                        <div class="engagement-icons">
+                            <span><i class="fas fa-heart"></i> 298</span>
+                            <span><i class="fas fa-comment"></i> 142</span>
+                            <span><i class="fas fa-share"></i> 267</span>
+                        </div>
+                        <button class="copy-btn">Copy Text</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 8: Community Event -->
+            <div class="campaign-post-card">
+                <div class="post-header">
+                    <h3 class="post-title">Meet Us in Person</h3>
+                    <span class="post-platform">📘 Facebook Post</span>
+                </div>
+                <div class="post-content">
+                    <div class="post-preview facebook-gradient">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <p class="post-text">
+                        "Meet the team! 🤝 Join us at our community event to discuss the issues that matter to you. When: [DATE] Where: [LOCATION] What: Open discussion, refreshments, and a chance to shape our community's future. See you there!"
+                    </p>
+                    <div class="post-hashtags">
+                        <span class="hashtag">#CommunityEvent</span>
+                        <span class="hashtag">#MeetUs</span>
+                        <span class="hashtag">#OpenDialogue</span>
+                    </div>
+                    <div class="post-meta">
+                        <div class="engagement-icons">
+                            <span><i class="fas fa-heart"></i> 145</span>
+                            <span><i class="fas fa-comment"></i> 73</span>
+                            <span><i class="fas fa-share"></i> 98</span>
+                        </div>
+                        <button class="copy-btn">Copy Text</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="#contents" style="display: inline-block; background: linear-gradient(135deg, #1e3c72 0%, #7e57c2 100%); color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">← Back to Contents</a>
+        </div>
+    </section>
+
+    <!-- Best Practices Section -->
+    <section id="facebook-practices" class="practices-section">
+        <div class="practices-container">
+            <h2 class="section-title">Facebook Campaign Best Practices</h2>
+            
+            <div class="practice-grid">
+                <div class="practice-card">
+                    <h4>📅 Post Timing</h4>
+                    <p>Post during peak hours: 6-9 PM weekdays and 11 AM-1 PM weekends for maximum visibility and engagement.</p>
+                </div>
+                <div class="practice-card">
+                    <h4>🎨 Visual Content</h4>
+                    <p>Always include images or videos. Posts with visuals get 2-3x more engagement than text-only posts.</p>
+                </div>
+                <div class="practice-card">
+                    <h4>💬 Engage Authentically</h4>
+                    <p>Respond to comments and messages promptly. Building genuine connections is key to campaign success.</p>
+                </div>
+                <div class="practice-card">
+                    <h4>#️⃣ Smart Hashtags</h4>
+                    <p>Use 5-10 relevant hashtags per post. Mix popular ones (#Vote) with niche ones (#LocalCouncil2025).</p>
+                </div>
+                <div class="practice-card">
+                    <h4>🎯 Call to Action</h4>
+                    <p>Always include a clear CTA: Vote, Share, Comment, or Attend. Make it easy for supporters to help.</p>
+                </div>
+                <div class="practice-card">
+                    <h4>📊 Monitor Analytics</h4>
+                    <p>Track reach, engagement, and shares. Use insights to refine your content strategy weekly.</p>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="#contents" style="display: inline-block; background: linear-gradient(135deg, #7e57c2 0%, #1e3c72 100%); color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">← Back to Contents</a>
+        </div>
+    </section>
+
+    <!-- Instagram Campaign Posts Section -->
+    <section id="instagram" class="campaign-content-section">
+        <h2 class="section-title">📸 Instagram Campaign Posts</h2>
+        
+        <div class="content-grid">
+            <!-- Instagram Post 1 -->
+            <div class="campaign-post-card">
+                <div class="post-header instagram-gradient">
+                    <h3 class="post-title">Campaign Vision</h3>
+                    <span class="post-platform">📷 Instagram Post</span>
+                </div>
+                <div class="post-content">
+                    <div class="post-preview instagram-gradient">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <p class="post-text">
+                        "Building a stronger community together 🚀 Vote [Candidate Name] for real change. Your voice matters. Your future matters. #LocalCouncil #Vote2025 #Community"
+                    </p>
+                    <div class="post-hashtags">
+                        <span class="hashtag">#Vote2025</span>
+                        <span class="hashtag">#CommunityFirst</span>
+                        <span class="hashtag">#Change</span>
+                        <span class="hashtag">#LocalLeadership</span>
+                    </div>
+                    <div class="post-meta">
+                        <div class="engagement-icons">
+                            <span><i class="fas fa-heart"></i> 523</span>
+                            <span><i class="fas fa-comment"></i> 89</span>
+                            <span><i class="fas fa-paper-plane"></i> 156</span>
+                        </div>
+                        <button class="copy-btn">Copy Caption</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Instagram Post 2: Reel Concept -->
+            <div class="campaign-post-card">
+                <div class="post-header instagram-gradient">
+                    <h3 class="post-title">Day in the Life</h3>
+                    <span class="post-platform">🎬 Instagram Reel (15-30s)</span>
+                </div>
+                <div class="post-content">
+                    <div class="post-preview instagram-gradient">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <p class="post-text">
+                        "A day spent listening to YOU 👂 Meeting community leaders, understanding your concerns, planning real solutions. This is what leadership looks like. #BehindTheScenes #CommunityFirst #Listen"
+                    </p>
+                    <div class="post-hashtags">
+                        <span class="hashtag">#InstagramReel</span>
+                        <span class="hashtag">#BTS</span>
+                        <span class="hashtag">#Leadership</span>
+                    </div>
+                    <div class="post-meta">
+                        <div class="engagement-icons">
+                            <span><i class="fas fa-heart"></i> 1.2K</span>
+                            <span><i class="fas fa-comment"></i> 234</span>
+                            <span><i class="fas fa-paper-plane"></i> 456</span>
+                        </div>
+                        <button class="copy-btn">Copy Caption</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Instagram Post 3: Story Series -->
+            <div class="campaign-post-card">
+                <div class="post-header instagram-gradient">
+                    <h3 class="post-title">Q&A Stories</h3>
+                    <span class="post-platform">📲 Instagram Stories (Series)</span>
+                </div>
+                <div class="post-content">
+                    <div class="post-preview instagram-gradient">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <p class="post-text">
+                        "Ask me anything! 💬 What's your biggest concern for our community? Your questions, your voice, your future. Drop them in the comments or DM! Let's talk. #AskMe #CommunityVoice"
+                    </p>
+                    <div class="post-hashtags">
+                        <span class="hashtag">#AMA</span>
+                        <span class="hashtag">#InstagramStories</span>
+                        <span class="hashtag">#Engagement</span>
+                    </div>
+                    <div class="post-meta">
+                        <div class="engagement-icons">
+                            <span><i class="fas fa-heart"></i> 892</span>
+                            <span><i class="fas fa-comment"></i> 167</span>
+                            <span><i class="fas fa-paper-plane"></i> 234</span>
+                        </div>
+                        <button class="copy-btn">Copy Caption</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Instagram Post 4: Carousel -->
+            <div class="campaign-post-card">
+                <div class="post-header instagram-gradient">
+                    <h3 class="post-title">5 Reasons to Vote</h3>
+                    <span class="post-platform">🖼️ Instagram Carousel (5 slides)</span>
+                </div>
+                <div class="post-content">
+                    <div class="post-preview instagram-gradient">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <p class="post-text">
+                        "Swipe through 5 reasons why your community deserves better! 👉 Education excellence 👉 Healthcare access 👉 Job creation 👉 Environmental action 👉 Your voice heard. Vote smart. Vote for change. #5Reasons #SwipeUp"
+                    </p>
+                    <div class="post-hashtags">
+                        <span class="hashtag">#Carousel</span>
+                        <span class="hashtag">#SwipeUp</span>
+                        <span class="hashtag">#Vote</span>
+                    </div>
+                    <div class="post-meta">
+                        <div class="engagement-icons">
+                            <span><i class="fas fa-heart"></i> 1.5K</span>
+                            <span><i class="fas fa-comment"></i> 312</span>
+                            <span><i class="fas fa-paper-plane"></i> 578</span>
+                        </div>
+                        <button class="copy-btn">Copy Caption</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="#contents" style="display: inline-block; background: linear-gradient(135deg, #e91e63 0%, #ff6b6b 100%); color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">← Back to Contents</a>
+        </div>
+    </section>
+
+    <!-- TikTok Campaign Content Section -->
+    <section id="tiktok" class="campaign-content-section">
+        <h2 class="section-title">🎵 TikTok Campaign Videos</h2>
+        
+        <div class="content-grid">
+            <!-- TikTok Video 1 -->
+            <div class="campaign-post-card">
+                <div class="post-header" style="background: linear-gradient(135deg, #000 0%, #111 100%);">
+                    <h3 class="post-title">Day in My Life</h3>
+                    <span class="post-platform">🎬 TikTok Video (15-60s)</span>
+                </div>
+                <div class="post-content">
+                    <div class="post-preview" style="background: linear-gradient(135deg, #000 0%, #111 100%);">
+                        <i class="fas fa-camera-movie"></i>
+                    </div>
+                    <p class="post-text">
+                        "POV: You're running for council and actually care about listening 👂 (Trending sound) Meeting with community, discussing real issues, getting things done. Vote [Candidate Name] #FYP #Vote #LocalLeader #Community"
+                    </p>
+                    <div class="post-hashtags">
+                        <span class="hashtag">#FYP</span>
+                        <span class="hashtag">#ForYouPage</span>
+                        <span class="hashtag">#Politics</span>
+                        <span class="hashtag">#Community</span>
+                    </div>
+                    <div class="post-meta">
+                        <div class="engagement-icons">
+                            <span><i class="fas fa-heart"></i> 3.2K</span>
+                            <span><i class="fas fa-comment"></i> 456</span>
+                            <span><i class="fas fa-share"></i> 1.2K</span>
+                        </div>
+                        <button class="copy-btn">Copy Caption</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TikTok Video 2 -->
+            <div class="campaign-post-card">
+                <div class="post-header" style="background: linear-gradient(135deg, #000 0%, #111 100%);">
+                    <h3 class="post-title">Quick Facts</h3>
+                    <span class="post-platform">⚡ TikTok Quick Facts (15-20s)</span>
+                </div>
+                <div class="post-content">
+                    <div class="post-preview" style="background: linear-gradient(135deg, #000 0%, #111 100%);">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <p class="post-text">
+                        "Did you know? 🤔 Our council needs change. Here's what we'll do: ✓ 50% education funding boost ✓ Free youth programs ✓ 100 new jobs created ✓ Green spaces expansion. Vote for real results! #Facts #Vote #Change"
+                    </p>
+                    <div class="post-hashtags">
+                        <span class="hashtag">#DidYouKnow</span>
+                        <span class="hashtag">#Facts</span>
+                        <span class="hashtag">#Education</span>
+                    </div>
+                    <div class="post-meta">
+                        <div class="engagement-icons">
+                            <span><i class="fas fa-heart"></i> 2.8K</span>
+                            <span><i class="fas fa-comment"></i> 389</span>
+                            <span><i class="fas fa-share"></i> 956</span>
+                        </div>
+                        <button class="copy-btn">Copy Caption</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TikTok Video 3 -->
+            <div class="campaign-post-card">
+                <div class="post-header" style="background: linear-gradient(135deg, #000 0%, #111 100%);">
+                    <h3 class="post-title">Challenge Video</h3>
+                    <span class="post-platform">🎪 TikTok Challenge (30-45s)</span>
+                </div>
+                <div class="post-content">
+                    <div class="post-preview" style="background: linear-gradient(135deg, #000 0%, #111 100%);">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="post-text">
+                        "Do the #VoteForChange challenge! 🗳️ Point to what matters to YOU: Education? Healthcare? Jobs? Environment? Then tell us in the comments why you're voting for [Candidate Name]. Tag 3 friends and let's spread the word! #VoteForChange #Challenge"
+                    </p>
+                    <div class="post-hashtags">
+                        <span class="hashtag">#VoteForChange</span>
+                        <span class="hashtag">#Challenge</span>
+                        <span class="hashtag">#TikTokChallenge</span>
+                    </div>
+                    <div class="post-meta">
+                        <div class="engagement-icons">
+                            <span><i class="fas fa-heart"></i> 4.5K</span>
+                            <span><i class="fas fa-comment"></i> 678</span>
+                            <span><i class="fas fa-share"></i> 1.8K</span>
+                        </div>
+                        <button class="copy-btn">Copy Caption</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TikTok Video 4 -->
+            <div class="campaign-post-card">
+                <div class="post-header" style="background: linear-gradient(135deg, #000 0%, #111 100%);">
+                    <h3 class="post-title">Meet the Team</h3>
+                    <span class="post-platform">👥 TikTok Collaboration (20-45s)</span>
+                </div>
+                <div class="post-content">
+                    <div class="post-preview" style="background: linear-gradient(135deg, #000 0%, #111 100%);">
+                        <i class="fas fa-people-arrows"></i>
+                    </div>
+                    <p class="post-text">
+                        "Meet the team fighting for your future! 🤝 Introducing our campaign leaders, volunteers, and supporters. This isn't about one person—it's about US building a better community TOGETHER. Join the movement! #MeetTheTeam #Together #Movement"
+                    </p>
+                    <div class="post-hashtags">
+                        <span class="hashtag">#MeetTheTeam</span>
+                        <span class="hashtag">#TeamWork</span>
+                        <span class="hashtag">#Community</span>
+                    </div>
+                    <div class="post-meta">
+                        <div class="engagement-icons">
+                            <span><i class="fas fa-heart"></i> 3.1K</span>
+                            <span><i class="fas fa-comment"></i> 445</span>
+                            <span><i class="fas fa-share"></i> 789</span>
+                        </div>
+                        <button class="copy-btn">Copy Caption</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="#contents" style="display: inline-block; background: linear-gradient(135deg, #ff6b6b 0%, #ff0000 100%); color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">← Back to Contents</a>
+        </div>
+    </section>
+
+    <!-- YouTube Campaign Content Section -->
+    <section id="youtube" class="campaign-content-section">
+        <h2 class="section-title">▶️ YouTube Campaign Content</h2>
+        
+        <div class="content-grid">
+            <!-- YouTube Video 1 -->
+            <div class="campaign-post-card">
+                <div class="post-header youtube-gradient">
+                    <h3 class="post-title">Full Campaign Launch</h3>
+                    <span class="post-platform">🎥 YouTube Video (5-10 min)</span>
+                </div>
+                <div class="post-content">
+                    <div class="post-preview youtube-gradient">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <p class="post-text">
+                        "Official Campaign Launch Video 🗳️ Why I'm running for local council, what I stand for, and how we'll build a stronger community together. Watch my full vision and join this movement. VOTE [Candidate Name]!"
+                    </p>
+                    <div class="post-hashtags">
+                        <span class="hashtag">#CampaignLaunch</span>
+                        <span class="hashtag">#Vote</span>
+                        <span class="hashtag">#LocalCouncil</span>
+                    </div>
+                    <div class="post-meta">
+                        <div class="engagement-icons">
+                            <span><i class="fas fa-heart"></i> 2.3K</span>
+                            <span><i class="fas fa-comment"></i> 567</span>
+                            <span><i class="fas fa-share"></i> 834</span>
+                        </div>
+                        <button class="copy-btn">Copy Description</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- YouTube Video 2 -->
+            <div class="campaign-post-card">
+                <div class="post-header youtube-gradient">
+                    <h3 class="post-title">Policy Breakdown</h3>
+                    <span class="post-platform">📊 YouTube Video (8-12 min)</span>
+                </div>
+                <div class="post-content">
+                    <div class="post-preview youtube-gradient">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <p class="post-text">
+                        "My 5-Point Plan for Our Community 📋 In this detailed breakdown, I explain: 1) Education Investment 2) Healthcare Access 3) Job Creation 4) Environmental Protection 5) Community Engagement. Subscribe for more updates!"
+                    </p>
+                    <div class="post-hashtags">
+                        <span class="hashtag">#PolicyBreakdown</span>
+                        <span class="hashtag">#MyPlan</span>
+                        <span class="hashtag">#Leadership</span>
+                    </div>
+                    <div class="post-meta">
+                        <div class="engagement-icons">
+                            <span><i class="fas fa-heart"></i> 1.8K</span>
+                            <span><i class="fas fa-comment"></i> 423</span>
+                            <span><i class="fas fa-share"></i> 612</span>
+                        </div>
+                        <button class="copy-btn">Copy Description</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- YouTube Video 3 -->
+            <div class="campaign-post-card">
+                <div class="post-header youtube-gradient">
+                    <h3 class="post-title">Community Testimonials</h3>
+                    <span class="post-platform">🎬 YouTube Video (6-9 min)</span>
+                </div>
+                <div class="post-content">
+                    <div class="post-preview youtube-gradient">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="post-text">
+                        "What Our Community Says 💬 Hear from real people who believe in this change. Teachers, parents, business owners, and volunteers share why they're supporting this campaign. This is grassroots leadership!"
+                    </p>
+                    <div class="post-hashtags">
+                        <span class="hashtag">#Testimonials</span>
+                        <span class="hashtag">#Community</span>
+                        <span class="hashtag">#Voices</span>
+                    </div>
+                    <div class="post-meta">
+                        <div class="engagement-icons">
+                            <span><i class="fas fa-heart"></i> 2.9K</span>
+                            <span><i class="fas fa-comment"></i> 651</span>
+                            <span><i class="fas fa-share"></i> 945</span>
+                        </div>
+                        <button class="copy-btn">Copy Description</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- YouTube Video 4 -->
+            <div class="campaign-post-card">
+                <div class="post-header youtube-gradient">
+                    <h3 class="post-title">Live Q&A Session</h3>
+                    <span class="post-platform">🔴 YouTube Live (60+ min)</span>
+                </div>
+                <div class="post-content">
+                    <div class="post-preview youtube-gradient">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <p class="post-text">
+                        "LIVE Q&A with [Candidate Name] 📻 Ask your questions, get direct answers. Date: [DATE] Time: [TIME] This is YOUR chance to engage directly with our campaign. Submit questions in the chat! #LiveQA #AskMe #Engagement"
+                    </p>
+                    <div class="post-hashtags">
+                        <span class="hashtag">#LiveQA</span>
+                        <span class="hashtag">#AskMe</span>
+                        <span class="hashtag">#YouTubeLive</span>
+                    </div>
+                    <div class="post-meta">
+                        <div class="engagement-icons">
+                            <span><i class="fas fa-heart"></i> 3.4K</span>
+                            <span><i class="fas fa-comment"></i> 834</span>
+                            <span><i class="fas fa-share"></i> 1.2K</span>
+                        </div>
+                        <button class="copy-btn">Copy Description</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="#contents" style="display: inline-block; background: linear-gradient(135deg, #ff0000 0%, #ff6b6b 100%); color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">← Back to Contents</a>
+        </div>
+    </section>
+
+    <!-- Platform Comparison Section -->
+    <section id="strategy" class="practices-section">
+        <div class="practices-container">
+            <h2 class="section-title">Social Media Platform Strategy</h2>
+            
+            <div class="practice-grid">
+                <div class="practice-card">
+                    <h4>📘 Facebook</h4>
+                    <p>Older demographics, detailed posts, community groups. Best for: Town halls, events, detailed policy discussions. Post daily 6-9 PM.</p>
+                </div>
+                <div class="practice-card">
+                    <h4>📸 Instagram</h4>
+                    <p>Visual storytelling, younger audiences, Reels. Best for: Behind-the-scenes, day-in-life, carousel posts. Post 3-5x weekly, Reels 2-3x weekly.</p>
+                </div>
+                <div class="practice-card">
+                    <h4>🎵 TikTok</h4>
+                    <p>Gen Z, trending sounds, viral challenges. Best for: Quick facts, challenges, humor, authenticity. Post 4-7x weekly for algorithm boost.</p>
+                </div>
+                <div class="practice-card">
+                    <h4>▶️ YouTube</h4>
+                    <p>Long-form content, in-depth explanations. Best for: Campaign launches, policy breakdowns, testimonials. Upload weekly for consistency.</p>
+                </div>
+                <div class="practice-card">
+                    <h4>📊 Cross-Platform Tips</h4>
+                    <p>Use consistent branding, repurpose content, engage authentically on all platforms, respond to comments within 24 hours.</p>
+                </div>
+                <div class="practice-card">
+                    <h4>🎯 Timing Strategy</h4>
+                    <p>Post when your audience is online. Facebook: evenings. Instagram: lunch/evening. TikTok: 6-10 AM & 7-11 PM. YouTube: Tuesday/Thursday.</p>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="#contents" style="display: inline-block; background: linear-gradient(135deg, #00bcd4 0%, #1e3c72 100%); color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">← Back to Contents</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Follow Me</h4>
+                <div class="social-links">
+                    <a href="https://web.facebook.com/profile.php?id=61585457380642" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://tiktok.com" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://twitter.com" target="_blank" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                    <a href="mailto:dreem@email.com" title="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Dream Paint. All rights reserved. Crafted with <span class="heart">❤</span> using AI Tools</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Copy to clipboard functionality
+        const copyBtns = document.querySelectorAll('.copy-btn');
+        copyBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const postText = e.currentTarget.closest('.campaign-post-card').querySelector('.post-text').textContent;
+                const hashtags = Array.from(e.currentTarget.closest('.campaign-post-card').querySelectorAll('.hashtag')).map(tag => tag.textContent).join(' ');
+                const fullText = postText + '\n\n' + hashtags;
+                
+                navigator.clipboard.writeText(fullText).then(() => {
+                    const originalText = btn.textContent;
+                    btn.textContent = 'Copied! ✓';
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                    }, 2000);
+                });
+            });
+        });
+
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

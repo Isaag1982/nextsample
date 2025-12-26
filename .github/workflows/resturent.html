@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodiePal - Modern Restaurant</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo" id="logo" style="cursor: pointer;">🍽️ FoodiePal</div>
+            <ul class="nav-menu">
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#delivery">Delivery</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#cart" class="cart-icon">🛒 <span id="cart-count">0</span></a></li>
+                <li><a href="index.html" class="nav-back-portfolio">← Back to Portfolio</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <img src="dinner.png" alt="Restaurant" class="hero-image">
+        <div class="hero-content">
+            <h1>Welcome to FoodiePal</h1>
+            <p>Delicious Food Delivered to Your Door or Reserved at Our Table</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" id="reservation-btn">📅 Table Reservation</button>
+                <button class="btn btn-secondary" id="order-btn">🛵 Order Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="dishes">Main Dishes</button>
+                <button class="category-btn" data-category="drinks">Soft Drinks</button>
+                <button class="category-btn" data-category="desserts">Desserts</button>
+            </div>
+            <div class="menu-items" id="menu-items">
+                <!-- Items will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Us</h2>
+                    <p>Welcome to FoodiePal, where culinary excellence meets modern convenience. Since 2020, we've been serving the finest dishes prepared with fresh ingredients and authentic recipes. Our passionate team is dedicated to providing you with an unforgettable dining experience, whether you dine with us or order from home.</p>
+                    <p>We believe in quality, freshness, and customer satisfaction above all else.</p>
+                </div>
+                <div class="about-image">
+                    🍕
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Opening Hours Section -->
+    <section class="hours">
+        <div class="container">
+            <h2>Opening Hours</h2>
+            <div class="hours-grid">
+                <div class="hour-item">
+                    <h3>Monday - Friday</h3>
+                    <p>11:00 AM - 11:00 PM</p>
+                </div>
+                <div class="hour-item">
+                    <h3>Saturday</h3>
+                    <p>10:00 AM - 12:00 AM</p>
+                </div>
+                <div class="hour-item">
+                    <h3>Sunday</h3>
+                    <p>10:00 AM - 10:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location">
+        <div class="container">
+            <h2>Find Us on the Map</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509156!2d144.9537353!3d-37.8162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sFlinders%20Street%20Station!5e0!3m2!1sen!2sau!4v1234567890" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="location-info">
+                <p><strong>📍 Address:</strong> 123 Food Street, City Center, Country</p>
+                <p><strong>📞 Phone:</strong> +1 (555) 123-4567</p>
+                <p><strong>📧 Email:</strong> info@foodiepal.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery/Takeaway Section -->
+    <section id="delivery" class="delivery">
+        <div class="container">
+            <h2>Delivery & Takeaway</h2>
+            <div class="delivery-options">
+                <div class="delivery-card">
+                    <div class="delivery-icon">🚗</div>
+                    <h3>Fast Delivery</h3>
+                    <p>Get your food delivered hot and fresh within 30-45 minutes</p>
+                    <ul>
+                        <li>✓ Free delivery on orders over $25</li>
+                        <li>✓ Real-time tracking</li>
+                        <li>✓ Professional drivers</li>
+                    </ul>
+                </div>
+                <div class="delivery-card">
+                    <div class="delivery-icon">🎒</div>
+                    <h3>Takeaway</h3>
+                    <p>Pick up your order at your convenience</p>
+                    <ul>
+                        <li>✓ Ready in 20-30 minutes</li>
+                        <li>✓ Eco-friendly packaging</li>
+                        <li>✓ No delivery fee</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <form class="contact-form" id="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 FoodiePal. All rights reserved.</p>
+            <p>Made with ❤️ for food lovers</p>
+            <a href="index.html" id="back-portfolio-btn" class="btn-back-portfolio">← Back to Portfolio</a>
+        </div>
+    </footer>
+
+    <!-- Table Reservation Modal -->
+    <div id="reservation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-reservation">&times;</span>
+            <h2>Reserve a Table</h2>
+            <form id="reservation-form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="phone" placeholder="Phone Number" required>
+                <input type="number" placeholder="Number of People" min="1" max="20" required>
+                <input type="date" required>
+                <input type="time" required>
+                <textarea placeholder="Special Requests or Comments" rows="4"></textarea>
+                <button type="submit" class="btn btn-primary">Confirm Reservation</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content cart-modal-content">
+            <span class="close" id="close-cart">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items" class="cart-items">
+                <!-- Cart items will be displayed here -->
+            </div>
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Delivery Fee:</span>
+                    <span id="delivery-fee">$2.50</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span id="total">$0.00</span>
+                </div>
+            </div>
+            <div class="delivery-type">
+                <label>
+                    <input type="radio" name="delivery" value="delivery" checked> Delivery
+                </label>
+                <label>
+                    <input type="radio" name="delivery" value="takeaway"> Takeaway
+                </label>
+            </div>
+            <button class="btn btn-primary btn-full" id="checkout-btn">Proceed to Payment</button>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-payment">&times;</span>
+            <h2>Payment</h2>
+            <div class="payment-methods">
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="card" checked>
+                    💳 Credit/Debit Card
+                </label>
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="wallet">
+                    📱 Digital Wallet
+                </label>
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="cash">
+                    💵 Cash on Delivery
+                </label>
+            </div>
+            <form id="payment-form">
+                <input type="text" id="card-name" placeholder="Name on Card" required>
+                <input type="text" id="card-number" placeholder="Card Number" maxlength="19" required>
+                <div class="form-row">
+                    <input type="text" id="card-expiry" placeholder="MM/YY" maxlength="5" required>
+                    <input type="text" id="card-cvv" placeholder="CVV" maxlength="3" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Complete Order - <span id="payment-total">$0.00</span></button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
